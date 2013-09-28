@@ -2,7 +2,7 @@
 layout: post
 title:  "A Vim Cheat Sheet"
 <!--date:   2013-09-27 22:17:04-->
-<!--categories: jekyll update-->
+categories: vim
 ---
 
 # TODO

@@ -2,7 +2,7 @@
 layout: post
 title:  "Naming Things"
 <!--date:   2013-09-27 22:17:04-->
-<!--categories: jekyll update-->
+categories: craft
 ---
 
 Talk about the importance of naming things, especial things that are
