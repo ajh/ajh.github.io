@@ -2,7 +2,6 @@
 layout: post
 title:  "Vim Cheat Sheet Part One"
 categories: vim
-excerpt: "description of vim features"
 ---
 
 As great as vim's text editing ability is, many other features are as
