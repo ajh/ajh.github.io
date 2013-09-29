@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/responsive_grid.css">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
 
-    </head>
-    <body>
+  <body>
+    <header class="section group">
+      <div class="col span_2_of_3">
+        <h1 class="site_name"><a href="/">{{ site.name }}</a></h1>
+        <p class="tagline">Notes from a ruby developer</p>
+      </div>
+      <img class="wrench col span_1_of_3" src="{{ site.url }}/images/wrench.png"/>
+    </header>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+    <section class="section group">
+      {{ content }}
+    </section>
 
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
-
-    </body>
+    <footer class="section group">
+      <p class="contact col span_2_of_3">
+        Andrew Hartford<br />
+        Software Developer<br />
+        Boston, MA
+      </p>
+      <p class="col span_1_of_3">
+        <a href="https://github.com/ajh">github.com/ajh</a><br />
+        <a href="https://doxo.com">doxo inc</a><br />
+      </p>
+    </footer>
+  </body>
 </html>

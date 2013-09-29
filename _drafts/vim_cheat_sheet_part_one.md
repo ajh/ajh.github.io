@@ -1,64 +1,32 @@
 ---
 layout: post
-title:  "A Vim Cheat Sheet"
-<!--date:   2013-09-27 22:17:04-->
+title:  "Vim Cheat Sheet Part One"
 categories: vim
+excerpt: "description of vim features"
 ---
 
-# TODO
+# Vim Cheat Sheet Part One
 
-* X jumps
-* X changelist
-* X buffers
-* files with NERDTree
-* X quickfix (copen)
-* X undo branches
-* X tags
-* CTRLP
-* Tagbar
-* EasyMotion
-* Fugitive
-* ZoomWin
-
-Common patterns of use:
-* list and select within list
-* next previous and other navigation
-* delete from list
-* open list window, close list window
-
-And how I use them
-
-# blog post
-
-# Intro
-
-Vim is great, but it can be hard.
+As great as vim's text editing ability is, many other features are as
+difficult to use and understand.
 
 Even after a decade of use there are features that I know I should use
-yet don't. I'll learn a feature, not use it in the heat of coding, 
-then forget what I learned. For a feature like jumplists, I've repeated
-this process 10 times maybe.
+yet don't. I'll learn a feature, not use it in the heat of coding, then
+forget what I learned. For a feature like jumplists, I've repeated this
+process 10 times maybe.
 
 Or I'll learn a useful fact but won't find it in help when I need
 reminding. Like the `%` register. I've used it and its useful but if I
 don't know to `:help register` then eventually I'll forget it.
 
-What follows is a cheatsheet of vim features that I use most often
-so I don't forget. Or they're some I aspire to use. 
+What follows is a cheatsheet of vim features that I use most often so I
+don't forget. Or they're some I aspire to use.
 
-# Table of contents
+# Vim has a lot of lists
 
-* jumplist
-* buffers
-* files
-* quickfix
-* branching undo
-* command-line (history and editing)
-
-# Things to know about features
-
-Seems like a lot of the features are lists. Here's some important functions
-in common with most lists:
+Like buffer lists, change lists, jump lists etc. These all need a
+similar set of features and its important to know the commands for them.
+Here's some common features:
 
 - How to open list?
 - close list?
@@ -116,12 +84,6 @@ no uppercase marks} You can use them to jump from file to file.
 - Add mark m{a-zA-Z}
 - remove mark :delm[arks] {marks} or :delm[arks]!
 
-# record
-
-See `:help complex-repeat`
-
-- how to edit a recording by pasting and yanking a register
-
 # registers
 
 See `:help copy-move`
@@ -132,7 +94,7 @@ See `:help copy-move`
 - navigate
 - To add prefix a command with "{arg} like "xyy to yank line to register
   x
-- remove 
+- remove
 
 ## types of registers
 
@@ -178,10 +140,6 @@ list.
 - navigate by typing number of desired match
 - or next match :tn[ext], previous match :tp[revious]
 
-# preview window
-
-The preview window is a special window to show (preview) another file.
-
 # quickfix
 
 Grep results are put in quickfix. Maybe someday I'll have test failures
@@ -207,17 +165,3 @@ see `:help undo-branches`
 - close list: ESC
 - go to older text state g-
 - go to newer text state g+
-
-# NERDTree
-
-# blog names
-
-* bit repairman - Notes from a ruby developer.
-* bit mechanic
-* bit technician
-* grease monkey patcher
-* duck typer
-* bit and tackle
-* bits and pieces
-* marginalia of a ruby developer
-* marginal notes of a ruby developer

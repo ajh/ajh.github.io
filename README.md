@@ -16,3 +16,33 @@ All other directories and files are MIT Licensed. Feel free to use the HTML and 
 To run jkyll locally, use this command:
 
     be jekyll serve --watch --drafts
+
+# TODO
+
+* responsive grid - http://www.responsivegridsystem.com/
+* color scheme and styling - http://ethanschoonover.com/solarized
+
+# Stuff
+
+* links - github, doxo, vim cheatsheet, google plus, facebook, linked in
+* list of posts
+* categories
+
+## index
+
+* option A - most recent post with list of other posts
+* option B - list of posts line items or excerpts
+* option C - list of full posts, with pagination
+
+## blog names
+
+* bit repairman - Notes from a ruby developer.
+* bit mechanic
+* bit technician
+* grease monkey patcher
+* duck typer
+* bit and tackle
+* bits and pieces
+* marginalia of a ruby developer
+* marginal notes of a ruby developer
+* marginal notes found in a ruby repair manual
