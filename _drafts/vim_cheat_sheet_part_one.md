@@ -5,8 +5,6 @@ categories: vim
 excerpt: "description of vim features"
 ---
 
-# Vim Cheat Sheet Part One
-
 As great as vim's text editing ability is, many other features are as
 difficult to use and understand.
 

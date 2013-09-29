@@ -1,19 +1,22 @@
-/*Global Reset*/
-/*============*/
-
-body {
-  background-color: #FFF;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
 /*Header*/
 /*======*/
-
-header img.wrench {
-}
 
 @media only screen and (max-width: 480px) {
   header img.wrench, header p.tagline {
     display: none;
   }
+}
+
+/* These selection declarations have to be separate
+   No text-shadow: twitter.com/miketaylr/status/12228805301
+   Also: hot pink! */
+::-moz-selection {
+  background: #FF5E99;
+  color:#fff;
+  text-shadow: none;
+}
+::selection {
+  background:#FF5E99;
+  color:#fff;
+  text-shadow: none;
 }
