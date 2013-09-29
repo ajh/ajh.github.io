@@ -20,3 +20,22 @@
   color:#fff;
   text-shadow: none;
 }
+
+/*Tables*/
+/*======*/
+
+article table {
+  margin-left: 40px;
+}
+
+article table td, article table th {
+  padding: 10px 5px 0 5px;
+}
+
+article table tbody tr:nth-child(odd) { 
+  background: #eee8d5;
+}
+
+article table td:first-child {
+  color: #268bd2;
+}

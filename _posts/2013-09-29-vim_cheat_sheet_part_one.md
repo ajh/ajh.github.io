@@ -35,24 +35,24 @@ Here's some common features:
 
 see `:help buffergator`
 
-| command | description |
-| ------- | ----------- |
-| \<Leader\>b | open list |
-| \<Leader\>b | close list |
-| j or k | navigate up or down |
-| | add to list |
-| d | remove from list |
+| command     | description         |
+| -------     | -----------         |
+| \<Leader\>b | open list           |
+| \<Leader\>b | close list          |
+| j or k      | navigate up or down |
+|             | add to list         |
+| d           | remove from list    |
 
 # jumps
 
 see `:help jumps`
 Each window has its own jump list.
 
-- Open list: :ju[mps]
-- navigate previous CTRL-0
-- navigate next CTRL-I
-- Add to list: n/a
-- Remove from list: ?
+| command  | description       |
+| -------  | -----------       |
+| :ju[mps] | Open list:        |
+| CTRL-0   | navigate previous |
+| CTRL-I   | navigate next     |
 
 # changelist
 
@@ -60,12 +60,12 @@ A list of cursor positions where changes (edits) were made.
 
 See `:help changelist`
 
-- Open list: changes
-- Close list: ESC
-- navigate previous g;
-- navigate next g,
-- Add to list
-- Remove from list: ?
+| command  | description       |
+| -------  | -----------       |
+| :changes | Open list:        |
+| ESC      | Close list:       |
+| g;       | navigate previous |
+| g,       | navigate next     |
 
 # marks
 
@@ -77,23 +77,24 @@ Lowercase marks 'a to 'z are remembered as long as the file remains in
 the buffer list. Uppercase marks 'A to 'Z include the file name.  {Vi:
 no uppercase marks} You can use them to jump from file to file.
 
-- Open list :marks
-- close list ESC
-- navigate to mark \`{marks}
-- Add mark m{a-zA-Z}
-- remove mark :delm[arks] {marks} or :delm[arks]!
+| command                             | description      |
+| -------                             | -----------      |
+| :marks                              | Open list        |
+| ESC                                 | close list       |
+| \`{marks}                           | navigate to mark |
+| m{a-zA-Z}                           | Add mark         |
+| :delm[arks] {marks} or :delm[arks]! | remove mark      |
 
 # registers
 
 See `:help copy-move`
 
-- Open list :reg[isters]
-- display context of register :reg[isters] {arg} or :di[splay] {arg}
-- close list ESC
-- navigate
-- To add prefix a command with "{arg} like "xyy to yank line to register
-  x
-- remove
+| command                                                           | description                 |
+| -------                                                           | -----------                 |
+| :reg[isters]                                                      | Open list                   |
+| :reg[isters] {arg} or :di[splay] {arg}                            | display context of register |
+| ESC                                                               | close list                  |
+| prefix a command with "{arg} like "xyy to yank line to register x | To add                      |
 
 ## types of registers
 
@@ -109,7 +110,9 @@ This isn't a complete list, just ones I find useful
 
 The alternate is most likely the previously edited file.
 
-- toggle between current file and alternate file CTRL-^
+| command | description                                    |
+| ------- | -----------                                    |
+| CTRL-^  | toggle between current file and alternate file |
 
 # tags
 
@@ -121,11 +124,12 @@ My prefered ways to start a tag search:
 
 Jumping to a tag will create an item on the tag stack
 
-- Open list :tags
-- close list ESC
-- previous :po[p] or CTRL-T
-- next :ta[g]
-- remove mark ?
+| command          | description |
+| -------          | ----------- |
+| :tags            | Open list   |
+| ESC              | close list  |
+| :po[p] or CTRL-T | previous    |
+| :ta[g]           | next        |
 
 ## tag-matchlist
 
@@ -134,10 +138,13 @@ see `:help tag-matchlist`
 A search may find several matching tags. Each match is put into a match
 list.
 
-- Open list :ts[elect]
-- close list ESC
-- navigate by typing number of desired match
-- or next match :tn[ext], previous match :tp[revious]
+| command                        | description    |
+| -------                        | -----------    |
+| :ts[elect]                     | Open list      |
+| ESC                            | close list     |
+| typing number of desired match | navigate       |
+| :tn[ext]                       | or next match  |
+| :tp[revious]                   | previous match |
 
 # quickfix
 
@@ -146,13 +153,13 @@ here as well.
 
 see `:help quickfix`
 
-- Open list: :cope[n]
-- close list: :ccl[ose]
-- navigate in list jk
-- navigate next :cn[ext]
-- navigate previous :cp[revious]
-- Add to list: n/a
-- Remove from list: n/a
+| command      | description       |
+| -------      | -----------       |
+| :cope[n]     | Open list:        |
+| :ccl[ose]    | close list:       |
+| jk           | navigate in list  |
+| :cn[ext]     | navigate next     |
+| :cp[revious] | navigate previous |
 
 # undo branches
 
@@ -160,7 +167,9 @@ This adds branching to the basic undo (u and CTRL-R)
 
 see `:help undo-branches`
 
-- Open list: :undol[ist]
-- close list: ESC
-- go to older text state g-
-- go to newer text state g+
+| command     | description            |
+| -------     | -----------            |
+| :undol[ist] | Open list:             |
+| ESC         | close list:            |
+| g-          | go to older text state |
+| g+          | go to newer text state |
