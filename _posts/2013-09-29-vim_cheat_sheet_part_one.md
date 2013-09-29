@@ -25,21 +25,23 @@ Like buffer lists, change lists, jump lists etc. These all need a
 similar set of features and its important to know the commands for them.
 Here's some common features:
 
-- How to open list?
-- close list?
-- navigate list?
-- Add to list?
-- Remove from list?
+- How to open a list?
+- close a list?
+- navigate a list?
+- Add to a list?
+- Remove from a list?
 
 # buffers with buffergator
 
 see `:help buffergator`
 
-- Open list: <Leader>b
-- Close list: <Leader>b
-- Navigate up down: j or k
-- Add to list: n/a
-- Remove from list: d
+| command | description |
+| ------- | ----------- |
+| \<Leader\>b | open list |
+| \<Leader\>b | close list |
+| j or k | navigate up or down |
+| | add to list |
+| d | remove from list |
 
 # jumps
 
@@ -162,10 +164,3 @@ see `:help undo-branches`
 - close list: ESC
 - go to older text state g-
 - go to newer text state g+
-
-# Table test
-
-| header 1 | header 2 |
-| -------- | -------- |
-| cell 1   | cell 2   |
-| cell 3   | cell 4   |
