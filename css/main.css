@@ -15,19 +15,13 @@
 /*Header*/
 /*======*/
 
-@media only screen and (max-width: 480px) {
-  header img.wrench, header p.tagline {
-    display: none;
-  }
-}
-
 header .site_name {
   color: #cb4b16;
   display: inline;
   font-size: 5em;
+  font-weight: bold;
   margin: 0;
   text-transform: uppercase;
-  font-weight: bold;
 }
 header .site_name a {
   text-decoration: none;
@@ -38,6 +32,15 @@ header .tagline {
 }
 header img.wrench {
   float: right;
+}
+
+@media only screen and (max-width: 480px) {
+  header .site_name {
+    font-size: 1em;
+  }
+  header img.wrench, header .tagline {
+    display: none;
+  }
 }
 
 /*Articles*/
