@@ -19,6 +19,7 @@ don't know to `:help register` then eventually I'll forget it.
 What follows is a cheatsheet of vim features that I use most often so I
 don't forget. Or they're some I aspire to use.
 
+------------------------
 # Vim has a lot of lists
 
 Like buffer lists, change lists, jump lists etc. These all need a
@@ -31,6 +32,7 @@ Here's some common features:
 - Add to a list?
 - Remove from a list?
 
+--------------------------
 # buffers with buffergator
 
 see `:help buffergator`
@@ -43,6 +45,7 @@ see `:help buffergator`
 |             | add to list         |
 | d           | remove from list    |
 
+-------
 # jumps
 
 see `:help jumps`
@@ -54,6 +57,7 @@ Each window has its own jump list.
 | CTRL-0   | navigate previous |
 | CTRL-I   | navigate next     |
 
+------------
 # changelist
 
 A list of cursor positions where changes (edits) were made.
@@ -67,6 +71,7 @@ See `:help changelist`
 | g;       | navigate previous |
 | g,       | navigate next     |
 
+-------
 # marks
 
 Bookmarks for cursor positions in a file.
@@ -85,6 +90,7 @@ no uppercase marks} You can use them to jump from file to file.
 | m{a-zA-Z}                           | Add mark         |
 | :delm[arks] {marks} or :delm[arks]! | remove mark      |
 
+-----------
 # registers
 
 See `:help copy-move`
@@ -106,6 +112,7 @@ This isn't a complete list, just ones I find useful
 -	"#	Contains the name of the alternate file.
 -	":	Contains the most recent executed command-line.  Example: Use "@:" to repeat the previous command-line command.
 
+----------------
 # alternate file
 
 The alternate is most likely the previously edited file.
@@ -114,6 +121,7 @@ The alternate is most likely the previously edited file.
 | ------- | -----------                                    |
 | CTRL-^  | toggle between current file and alternate file |
 
+------
 # tags
 
 My prefered ways to start a tag search:
@@ -146,6 +154,7 @@ list.
 | :tn[ext]                       | or next match  |
 | :tp[revious]                   | previous match |
 
+----------
 # quickfix
 
 Grep results are put in quickfix. Maybe someday I'll have test failures
@@ -161,6 +170,7 @@ see `:help quickfix`
 | :cn[ext]     | navigate next     |
 | :cp[revious] | navigate previous |
 
+---------------
 # undo branches
 
 This adds branching to the basic undo (u and CTRL-R)

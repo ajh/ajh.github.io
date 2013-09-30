@@ -1,8 +1,11 @@
 name: Bit Repairman
 markdown: redcarpet
 redcarpet:
-  extensions: ["tables"]
-
+  extensions:
+    - tables
+    - no_intra_emphasis
+    - underline
+    - highlight
 pygments: true
 
 exclude:

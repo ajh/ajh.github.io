@@ -39,3 +39,7 @@ article table tbody tr:nth-child(odd) {
 article table td:first-child {
   color: #268bd2;
 }
+
+article hr {
+  margin-top: 2em;
+}
