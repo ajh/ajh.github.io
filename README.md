@@ -20,12 +20,8 @@ To run jkyll locally, use this command:
 
 # TODO
 
-* X responsive grid - http://www.responsivegridsystem.com/
-* X color scheme and styling - http://ethanschoonover.com/solarized
-* convert vim commands to tables
-* style the tables
 * consider vim screen shots
-* should I live in Boston or Newton?
+* google analytics
 
 # Stuff
 
