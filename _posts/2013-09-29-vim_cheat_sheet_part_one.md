@@ -4,33 +4,11 @@ title:  "Vim Cheat Sheet Part One"
 categories: vim
 ---
 
-As great as vim's text editing ability is, many other features are as
-difficult to use and understand.
+This is my personal vim cheatsheet. The features described here are ones
+that I find most useful. I've also tried to select the best commands to
+interact with a feature.
 
-Even after a decade of use there are features that I know I should use
-yet don't. I'll learn a feature, not use it in the heat of coding, then
-forget what I learned. For a feature like jumplists, I've repeated this
-process 10 times maybe.
-
-Or I'll learn a useful fact but won't find it in help when I need
-reminding. Like the `%` register. I've used it and its useful but if I
-don't know to `:help register` then eventually I'll forget it.
-
-What follows is a cheatsheet of vim features that I use most often so I
-don't forget. Or they're some I aspire to use.
-
-------------------------
-# Vim has a lot of lists
-
-Like buffer lists, change lists, jump lists etc. These all need a
-similar set of features and its important to know the commands for them.
-Here's some common features:
-
-- How to open a list?
-- close a list?
-- navigate a list?
-- Add to a list?
-- Remove from a list?
+This is part one. I plan to write up more features later.
 
 --------------------------
 # buffers with buffergator
@@ -123,6 +101,8 @@ The alternate is most likely the previously edited file.
 
 ------
 # tags
+
+See `:help tags`
 
 My prefered ways to start a tag search:
 
