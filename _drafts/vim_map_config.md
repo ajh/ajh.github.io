@@ -14,9 +14,39 @@ map namespaces:
 * none
 * `<leader>` (in my case comma)
 * Control (like `<c-p>` for CtrlP)
+* Alt? vim doesn't seem to use this at all
 * [ and ] for motions
 
 Also modes can come into play and maps can be scoped to a buffer.
+
+Some things to note:
+
+Since my leader is comma, I can only reach that with my right hand.
+
+What control characters are available? See `:help normal-index`
+
+In normal mode: h, i, j, m, n, p, k.
+
+h,i,m
+
+k, and j for my movements
+p for cntrl p
+n for nerdtree
+? for zoomwin
+? for tagbar
+? for buffergator
+
+# TODO:
+
+use meta keys instead of control keys because most control keys aready
+do stuff.
+
+But for OS X I need to map the funny chars to meta chars, like:
+
+    :map œ <M-Q>
+
+    :map <M-Q> :echom 'meta Q'<CR>
+    :map <A-Q> :echom 'alt Q'<CR>
 
 # Philosophy
 
@@ -33,32 +63,49 @@ plugin, that would be called by a repetition of the first letter
 plugin gets its own first letter, and the second letter chooses the
 command within that plugin.
 
+Things that open windows use control maps.
+
 # My settings
 
 | map                | command                               |
 | ---                | -------                               |
+
+* motion
+
 | `<C-K>`            | `10k`                                 |
 | `<C-J> (aka <NL>)` | `10j`                                 |
+
+* text transform
+
 | `,$`               | `:call Preserve("%s/\\s\\+$//e")<CR>` |
-| `,s`               | `:sp<CR>`                             |
-| `,v`               | `:vsp<CR>`                            |
 
 # CtrlP
 
+prefix is `<C-P>`
+
 | map     | command      |
 | ---     | -------      |
-| `<C-P>` | `:CtrlP`     |
-|         | :CtrlPBuffer |
-| `<D-t>` | `:CtrlP<CR>` |
+| `<C-P><C-P>` | `:CtrlP`     |
+| `<C-P><C-B>` | :CtrlPBuffer |
+
+* change window
+* fuzzy find
 
 # NERDTree
 
+prefix is `<C-N>`
+
 | map  | command                                   |
 | ---  | -------                                   |
-| `,f` | `:NERDTreeFind<CR>`                       |
-| `,n` | `:NERDTreeToggle<CR> :NERDTreeMirror<CR>` |
+| `<C-N><C-F>` | `:NERDTreeFind<CR>`                       |
+| `<C-N><C-N>` | `:NERDTreeToggle<CR> :NERDTreeMirror<CR>` |
+
+* change window
+* navigate
 
 # NERDCommenter
+
+prefix is `<leader>c`
 
 | map         | command                    |
 | ---         | -------                    |
@@ -78,20 +125,33 @@ command within that plugin.
 | `,c<Space>` | `NERDCommenterToggle`      |
 | `<D-/k>`    | `NERDCommenterToggle<CR>`  |
 
+* text transform
+
 # ZoomWin
+
+prefix is `<C-?>`
 
 | map      | command        |
 | ---      | -------        |
-| `,zw`    | `:ZoomWin<CR>` |
-| `<C-W>o` | `ZoomWin`      |
+| `<C-Z>`  | `:ZoomWin<CR>` |
+
+* opens a window
 
 # Tagbar
 
+prefix is `<C-T>`
+
 | map   | command             |
 | ---   | -------             |
-| `,rt` | `:TagbarToggle<CR>` |
+| `<C-T>` | `:TagbarToggle<CR>` |
+
+* opens a window
 
 # Fugitive
+
+prefix is `<leader>g`
+
+* add Ggrep which I use most often
 
 | map   | command         |
 | ---   | -------         |
@@ -104,11 +164,17 @@ command within that plugin.
 
 # Inflector (my plugin)
 
+prefix is `<leader>i`
+
 | map   | command             |
 | ---   | -------             |
 | `,ii` | `:call Inflector()` |
 
+* text transform
+
 # Easy Motion
+
+prefix is `<leader><leader>`
 
 | map    | command                               |
 | ---    | -------                               |
@@ -129,24 +195,20 @@ command within that plugin.
 | `,,E`  | `* :call EasyMotion#EW(0, 0)<CR>`     |
 | `,,B`  | `* :call EasyMotion#WBW(0, 1)<CR>`    |
 
+* motion
+
 # Buffergator
+
+prefix is `<C-B>`
+
+* I'm missing [b and ]b maps
 
 | map          | command                                                  |
 | ---          | -------                                                  |
-| `,<S-Down>`  | `* :BuffergatorMruCycleNext rightbelow sbuffer<CR>`      |
-| `,<S-Right>` | `* :BuffergatorMruCycleNext rightbelow vert sbuffer<CR>` |
-| `,<S-Up>`    | `* :BuffergatorMruCycleNext leftabove sbuffer<CR>`       |
-| `,<S-Left>`  | `* :BuffergatorMruCycleNext leftabove vert sbuffer<CR>`  |
-| `,<Down>`    | `* :BuffergatorMruCyclePrev rightbelow sbuffer<CR>`      |
-| `,<Right>`   | `* :BuffergatorMruCyclePrev rightbelow vert sbuffer<CR>` |
-| `,<Up>`      | `* :BuffergatorMruCyclePrev leftabove sbuffer<CR>`       |
-| `,<Left>`    | `* :BuffergatorMruCyclePrev leftabove vert sbuffer<CR>`  |
-| `,T`         | `* :BuffergatorTabsClose<CR>`                            |
-| `,t`         | `* :BuffergatorTabsOpen<CR>`                             |
-| `,B`         | `* :BuffergatorClose<CR>`                                |
-| `,b`         | `* :BuffergatorOpen<CR>`                                 |
-| `Â`          | `* :BuffergatorMruCycleNext<CR>`                         |
-| `â`          | `* :BuffergatorMruCyclePrev<CR>`                         |
+| `<C-B><C-B>` | `:BuffergatorToggle()<CR>`
+
+* change window
+* navigate
 
 # janus
 
@@ -296,6 +358,9 @@ command within that plugin.
 
 # Surround
 
+prefix `s`
+
+text transform
 
 | map   | command      |
 | ---   | -------      |
@@ -311,19 +376,23 @@ command within that plugin.
 
 # matchit
 
+* motion
+
 | map  | command                                                   |
 | ---  | -------                                                   |
 | `[%` | `* v:<C-U>call <SNR>63_MultiMatch("bW", "o") <CR>`        |
-| `[%` | `<Esc>[%m'gv```                                           |
+| `[%` | `<Esc>[%m'gv`                                           |
 | `[%` | `* :<C-U>call <SNR>63_MultiMatch("bW", "n") <CR>`         |
 | `]%` | `* v:<C-U>call <SNR>63_MultiMatch("W",  "o") <CR>`        |
-| `]%` | `<Esc>]%m'gv```                                           |
+| `]%` | `<Esc>]%m'gv`                                           |
 | `]%` | `* :<C-U>call <SNR>63_MultiMatch("W",  "n") <CR>`         |
 | `g%` | `* v:<C-U>call <SNR>63_Match_wrapper('',0,'o') <CR>`      |
-| `g%` | `* :<C-U>call <SNR>63_Match_wrapper('',0,'v') <CR>m'gv``` |
+| `g%` | `* :<C-U>call <SNR>63_Match_wrapper('',0,'v') <CR>m'gv`   |
 | `g%` | `* :<C-U>call <SNR>63_Match_wrapper('',0,'n') <CR>`       |
 
 # indent object
+
+* motion
 
 | map  | command                                                                                                           |
 | ---  | -------                                                                                                           |
@@ -337,6 +406,9 @@ command within that plugin.
 | `ii` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(1, 0, 0, [line("."), line("."), col("."), col(".")])<CR>`            |
 
 # gundo
+
+* opens a window
+* navigate
 
 | map    | command            |
 | ---    | -------            |
