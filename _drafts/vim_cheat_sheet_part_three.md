@@ -48,6 +48,8 @@ Both files and buffers can be opened by:
 * indent-object
 * Fugitive
 * ZoomWin
+* my vim plugins
+* motions like [[ and [m
 
 Common patterns of use:
 * list and select within list
