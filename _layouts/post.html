@@ -2,11 +2,16 @@
 layout: default
 ---
 
-<article class="post col span_2_of_3">
-  <h1>{{ page.title }}</h1>
-  <p class="meta">{{ page.date | date_to_string }}</p>
-  {{ content }}
-</article>
+<div class="col span_2_of_3">
+  <header class="post">
+    <p class="meta">{{ page.date | date_to_string }}</p>
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  <article class="post">
+    {{ content }}
+  </article>
+</div>
 
 <aside class="col span_1_of_3">
   <h3>Other Posts</h3>

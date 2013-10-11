@@ -46,6 +46,10 @@ header img.wrench {
 /*Articles*/
 /*======*/
 
+header.post p.meta {
+  float: right;
+}
+
 article table {
   margin-left: 40px;
 }
@@ -64,4 +68,18 @@ article table td:first-child {
 
 article hr {
   margin-top: 2em;
+}
+
+/*Table of Contents*/
+/*=================*/
+
+ul#toc {
+  display: inline;
+  list-style: none;
+}
+ul#toc li {
+  display: inline;
+}
+h4.toc {
+  display: inline;
 }
