@@ -83,3 +83,15 @@ ul#toc li {
 h4.toc {
   display: inline;
 }
+
+/*Code Blocks*/
+/*===========*/
+
+.highlight pre {
+  background-color: #002b36;
+  color: #839496;
+}
+
+code.vim .k {
+  color: #268bd2;
+}

@@ -59,7 +59,7 @@ mark {
   background: #ff0;
   color: #000;
 }
-code,
+/*code,*/
 kbd,
 pre,
 samp {
@@ -187,7 +187,7 @@ body {
   padding: 1em;
 }
 code {
-  background-color: #eee8d5;
+  /*background-color: #eee8d5;*/
   padding: 2px;
 }
 a {
@@ -216,9 +216,9 @@ pre {
   padding: 1em;
   box-shadow: 5pt 5pt 8pt #eee8d5;
 }
-pre code {
-  background-color: #fdf6e3;
-}
+/*pre code {*/
+  /*background-color: #fdf6e3;*/
+/*}*/
 h1 {
   font-size: 2.8em;
 }

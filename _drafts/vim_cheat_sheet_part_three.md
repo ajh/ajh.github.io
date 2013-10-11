@@ -21,6 +21,19 @@ Theres the big topic of configuring keybindings. I could have a table of
 <leader>[a-zA-Z] and map which plugin owns each letter. I think I'm
 going to have to move to a two letter keybinding system.
 
+# Redir
+
+Besides its use when vimscripting, this is mostly useful for
+capturing the output of commands that echo a bunch of stuff like `:map`.
+
+This'll write all the configure maps to a file:
+
+{% highlight vim %}
+:redir > maps.txt
+:map
+:redir END
+{% endhighlight %}
+
 # Lists and how I interact with them
 
 Opening files:
