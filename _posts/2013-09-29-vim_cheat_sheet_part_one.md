@@ -153,6 +153,8 @@ see `:help quickfix`
 ---------------
 # undo branches
 
+*Update: See `:help gundo` for a better way to interact with this.*
+
 This adds branching to the basic undo (u and CTRL-R)
 
 see `:help undo-branches`
