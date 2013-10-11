@@ -2,10 +2,12 @@
 layout: post
 title:  "A Vim Cheat Sheet Part Two"
 categories: vim
-excerpt: "description of vim features"
+excerpt: "Description of command line, record, and help grep"
 ---
 
-Here are some more vim features. Also see <a href="{{ site.url }}/vim/2013/09/29/vim_cheat_sheet_part_one.html">Vim Cheat Sheet Part One</a>.
+This is a continuation of my cheat sheet. Here are descriptions of the way I use some more vim features.
+
+Also see <a href="{{ site.url }}/vim/2013/09/29/vim_cheat_sheet_part_one.html">Vim Cheat Sheet Part One</a>.
 
 # command line
 
