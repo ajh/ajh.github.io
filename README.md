@@ -21,7 +21,7 @@ To run jkyll locally, use this command:
 # TODO
 
 * consider vim screen shots
-* google analytics
+* post table of contents with anchors
 
 # Stuff
 
