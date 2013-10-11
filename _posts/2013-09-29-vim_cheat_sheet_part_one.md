@@ -104,7 +104,7 @@ The alternate is most likely the previously edited file.
 
 See `:help tags`
 
-My prefered ways to start a tag search:
+My preferred ways to start a tag search:
 
 - CTRL-] with cursor on keyword, goes to first match
 - g CTRL-] (Like CTRL-], but opens tselect menu when more than one match)
