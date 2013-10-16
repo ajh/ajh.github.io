@@ -4,66 +4,79 @@ title:  "My vim map configuration"
 categories: vim
 ---
 
-I'm starting to have more plugins loaded, and am puzzled how to
-configure maps for their commands. Seems like most of the plugins try to
-configure one letter maps, like `<leader>n`. I'm now thinking
-something...
+# Introduction
 
-map namespaces:
+Once a bunch of plugins are loaded, looking at their default mappings
+shows a few problems. First they don't follow each others conventions.
+Some use control characters, some use leaders. Also, they often don't
+provide mappings to secondary features which I would like to have, like
+NERDTreeFind, and it can difficult to choose a good mapping.
 
-* none
-* `<leader>` (in my case comma)
-* Control (like `<c-p>` for CtrlP)
-* Alt? vim doesn't seem to use this at all
-* [ and ] for motions
+So I set out to reconceptualize my mappings.
 
-Also modes can come into play and maps can be scoped to a buffer.
+## Map namespaces
 
-Some things to note:
+First of all, I can think of mapping keys as in different namespaces:
 
-Since my leader is comma, I can only reach that with my right hand.
+* `<leader>` + keys
+* Control keys (like `<C-P>` for CtrlP)
+* Alt keys
+* `[` and `]` (used by motions)
+* no-prefix, like `i` in normal mode to enter insert mode
 
-What control characters are available? See `:help normal-index`
+The **leader** space is good because it's a known convention for user maps
+and vim doesn't define any by default. My leader is ",". A practical
+issue is left hand keys are easier to type after "," than right hand
+keys.
 
-In normal mode: h, i, j, m, n, p, k.
+**Control keys** are not so good because vim defines a lot of them and the
+namespace is very crowed. Also, some have meaning for terminals like
+`<C-S>` to suspend. My research found that only the following are
+save to use in normal mode: 
 
-h,i,m
+    h, i, j, m, n, p, k.
 
-k, and j for my movements
-p for cntrl p
-n for nerdtree
-? for zoomwin
-? for tagbar
-? for buffergator
+I couldn't find any maps defined with **Alt keys**. The drawback I found
+is that vim won't see them as `<M-X>` or `<A-X>` on OS X. Instead OS X
+interprets them as international characters like `ñ`. But they can be used
+if the maps are defined with these characters, like this:
 
-# TODO:
+    :map œ :echom 'alt q pressed'<CR>
 
-use meta keys instead of control keys because most control keys aready
-do stuff.
+Also on OS X, some alt characters modify the next character, by adding a
+tilde for example. These are \`, e, u, i, n. I also found others that don't seem to work: b, t.
 
-But for OS X I need to map the funny chars to meta chars, like:
+In sum, avoid these:
 
-    :map œ <M-Q>
+    `, b, e, i, n, t, u
 
-    :map <M-Q> :echom 'meta Q'<CR>
-    :map <A-Q> :echom 'alt Q'<CR>
+**Motion keys** are great but should only be used by motions.
 
-# Philosophy
+**No-prefix keys** are used by vim. I'm not sure if any are available
+for maps.
 
-Theres the big topic of configuring keybindings. I could have a table of
-`<leader>[a-zA-Z]` and map which plugin owns each letter. I think I'm
-going to have to move to a two letter keybinding system.
+## map scopes
 
-For leader maps, I'm thinking of using two letter names. Each plugins
-gets its own prefix, like `<leader>c` for NERDCommenter, and the second
-letter specifies the command. If there is a primary command for the
-plugin, that would be called by a repetition of the first letter
-`<leader>cc` for NERDCommenter's Toggle for instance.
+I haven't needed this for my customizations, but maps can be scoped to a
+buffer and to a mode like normal or visual.
 
-plugin gets its own first letter, and the second letter chooses the
-command within that plugin.
+## types of plugins
 
-Things that open windows use control maps.
+I can categorize plugin features into a few types:
+
+* motion
+* navigation
+* text transform (selected with a motion or visual mode)
+* window related (I include features which open in a window, like NERDTree)
+* fuzzy find 
+
+## my concept
+
+Here's what I'm going with:
+
+1. Window related functions use alt keys.
+2. Plugins with multiple maps all start with a common prefix. Nerdtree uses
+`<M-R>` as a prefix for example.
 
 # My settings
 
@@ -81,24 +94,24 @@ Things that open windows use control maps.
 
 # CtrlP
 
-prefix is `<C-P>`
+prefix is `<M-P>`
 
 | map     | command      |
 | ---     | -------      |
-| `<C-P><C-P>` | `:CtrlP`     |
-| `<C-P><C-B>` | :CtrlPBuffer |
+| `<M-P><M-P>` | `:CtrlP`     |
+| `<M-P><M-B>` | :CtrlPBuffer |
 
 * change window
 * fuzzy find
 
 # NERDTree
 
-prefix is `<C-N>`
+prefix is `<M-N>`
 
 | map  | command                                   |
 | ---  | -------                                   |
-| `<C-N><C-F>` | `:NERDTreeFind<CR>`                       |
-| `<C-N><C-N>` | `:NERDTreeToggle<CR> :NERDTreeMirror<CR>` |
+| `<M-N><M-N>` | `:NERDTreeToggle<CR> :NERDTreeMirror<CR>` |
+| `<M-N><M-F>` | `:NERDTreeFind<CR>`                       |
 
 * change window
 * navigate
@@ -129,21 +142,21 @@ prefix is `<leader>c`
 
 # ZoomWin
 
-prefix is `<C-?>`
+prefix is `<M-Z>`
 
 | map      | command        |
 | ---      | -------        |
-| `<C-Z>`  | `:ZoomWin<CR>` |
+| `<M-Z>`  | `:ZoomWin<CR>` |
 
 * opens a window
 
 # Tagbar
 
-prefix is `<C-T>`
+prefix is `<M-T>`
 
 | map   | command             |
 | ---   | -------             |
-| `<C-T>` | `:TagbarToggle<CR>` |
+| `<M-T>` | `:TagbarToggle<CR>` |
 
 * opens a window
 
@@ -199,13 +212,13 @@ prefix is `<leader><leader>`
 
 # Buffergator
 
-prefix is `<C-B>`
+prefix is `<M-B>`
 
 * I'm missing [b and ]b maps
 
 | map          | command                                                  |
 | ---          | -------                                                  |
-| `<C-B><C-B>` | `:BuffergatorToggle()<CR>`
+| `<M-B><M-B>` | `:BuffergatorToggle()<CR>`
 
 * change window
 * navigate
@@ -407,9 +420,20 @@ text transform
 
 # gundo
 
+prefix `<M-G>`
+
 * opens a window
 * navigate
 
 | map    | command            |
 | ---    | -------            |
-| `<F5>` | `:GundoToggle<CR>` |
+| `<M-G>` | `:GundoToggle<CR>` |
+
+# Notes
+
+## How to see all mappings
+
+    :redir > maps.txt
+    :silent map
+    :redir END
+
