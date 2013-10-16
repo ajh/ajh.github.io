@@ -84,20 +84,15 @@ Here's what I'm going with:
 2. Plugins with multiple maps all start with a common prefix. Nerdtree uses
 `<M-R>` as a prefix for example.
 
-# My settings
+# Buffergator
 
-## motions
+prefix is `<M-F>`, categories *change window*, *navigate*
 
-| map                | command                               |
-| ---                | -------                               |
-| `<C-K>`            | `10k`                                 |
-| `<C-J> (aka <NL>)` | `10j`                                 |
+TODO: I'm missing [b and ]b maps
 
-## text transforms
-
-| map                | command                               |
-| ---                | -------                               |
-| `,$`               | `:call Preserve("%s/\\s\\+$//e")<CR>` |
+| map     | command                    |
+| ---     | -------                    |
+| `<M-F>` | `:BuffergatorToggle()<CR>` |
 
 # CtrlP
 
@@ -107,78 +102,6 @@ Prefix is `<C-P>`, categories are *change window*, *fuzzy find*.
 | ---          | -------            |
 | `<C-P><C-P>` | `:CtrlP<CR>`       |
 | `<C-P><C-B>` | `:CtrlPBuffer<CR>` |
-
-# NERDTree
-
-prefix is `<M-R>`, categories are *change window*, *navigate*.
-
-| map          | command               |
-| ---          | -------               |
-| `<M-R><M-R>` | `:NERDTreeToggle<CR>` |
-| `<M-R><M-F>` | `:NERDTreeFind<CR>`   |
-
-# NERDCommenter
-
-prefix is `<leader>c`, category is *text transform*
-
-| map         | command                    |
-| ---         | -------                    |
-| `,cc`       | `NERDCommenterComment`     |
-| `,cu`       | `NERDCommenterUncomment`   |
-|             | **below I use less often** |
-| `,ca`       | `NERDCommenterAltDelims`   |
-| `,cb`       | `NERDCommenterAlignBoth`   |
-| `,cl`       | `NERDCommenterAlignLeft`   |
-| `,cA`       | `NERDCommenterAppend`      |
-| `,cy`       | `NERDCommenterYank`        |
-| `,cs`       | `NERDCommenterSexy`        |
-| `,ci`       | `NERDCommenterInvert`      |
-| `,c$`       | `NERDCommenterToEOL`       |
-| `,cn`       | `NERDCommenterNested`      |
-| `,cm`       | `NERDCommenterMinimal`     |
-| `,c<Space>` | `NERDCommenterToggle`      |
-| `<D-/k>`    | `NERDCommenterToggle<CR>`  |
-
-
-# ZoomWin
-
-category is *opens a window*
-
-| map          | command        |
-| ---          | -------        |
-| `<C-W><C-M>` | `:ZoomWin<CR>` |
-
-
-# Tagbar
-
-category is *opens a window*
-
-| map   | command             |
-| ---   | -------             |
-| `<M-A>` | `:TagbarToggle<CR>` |
-
-# Fugitive
-
-prefix is `<leader>g`
-
-TODO: add a map to Ggrep which I use most often
-
-| map   | command         |
-| ---   | -------         |
-| `,gp` | `:Git push<CR>` |
-| `,gc` | `:Gcommit<CR>`  |
-| `,gl` | `:Glog<CR>`     |
-| `,gd` | `:Gdiff<CR>`    |
-| `,gs` | `:Gstatus<CR>`  |
-| `,gb` | `:Gblame<CR>`   |
-
-# Inflector (my plugin)
-
-prefix is `<leader>i`, category is *text transform*
-
-| map   | command             |
-| ---   | -------             |
-| `,ii` | `:call Inflector()` |
 
 # Easy Motion
 
@@ -203,15 +126,51 @@ prefix is `<leader><leader>`, category is *motion*
 | `,,E`  | `* :call EasyMotion#EW(0, 0)<CR>`     |
 | `,,B`  | `* :call EasyMotion#WBW(0, 1)<CR>`    |
 
-# Buffergator
+# Fugitive
 
-prefix is `<M-F>`, categories *change window*, *navigate*
+prefix is `<leader>g`
 
-TODO: I'm missing [b and ]b maps
+TODO: add a map to Ggrep which I use most often
 
-| map          | command                                                  |
-| ---          | -------                                                  |
-| `<M-F>` | `:BuffergatorToggle()<CR>`
+| map   | command         |
+| ---   | -------         |
+| `,gp` | `:Git push<CR>` |
+| `,gc` | `:Gcommit<CR>`  |
+| `,gl` | `:Glog<CR>`     |
+| `,gd` | `:Gdiff<CR>`    |
+| `,gs` | `:Gstatus<CR>`  |
+| `,gb` | `:Gblame<CR>`   |
+
+# gundo
+
+categories are *opens a window*, *navigate*
+
+| map     | command            |
+| ---     | -------            |
+| `<M-G>` | `:GundoToggle<CR>` |
+
+# indent object
+
+category is *motion*
+
+| map  | command                                                                                                           |
+| ---  | -------                                                                                                           |
+| `aI` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(0, 1, 1, [line("'<"), line("'>"), col("'<"), col("'>")])<CR><Esc>gv` |
+| `aI` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(0, 1, 0, [line("."), line("."), col("."), col(".")])<CR>`            |
+| `ai` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(0, 0, 1, [line("'<"), line("'>"), col("'<"), col("'>")])<CR><Esc>gv` |
+| `ai` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(0, 0, 0, [line("."), line("."), col("."), col(".")])<CR>`            |
+| `iI` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(1, 1, 1, [line("'<"), line("'>"), col("'<"), col("'>")])<CR><Esc>gv` |
+| `iI` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(1, 1, 0, [line("."), line("."), col("."), col(".")])<CR>`            |
+| `ii` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(1, 0, 1, [line("'<"), line("'>"), col("'<"), col("'>")])<CR><Esc>gv` |
+| `ii` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(1, 0, 0, [line("."), line("."), col("."), col(".")])<CR>`            |
+
+# Inflector (my plugin)
+
+prefix is `<leader>i`, category is *text transform*
+
+| map   | command             |
+| ---   | -------             |
+| `,ii` | `:call Inflector()` |
 
 # janus
 
@@ -260,6 +219,94 @@ TODO: I'm missing [b and ]b maps
 | `<Up>`     | `gk`                                |
 | `<Down>`   | `gj`                                |
 | `<BS>`     | `"-d`                               |
+
+# matchit
+
+category is *motion*
+
+| map  | command                                                   |
+| ---  | -------                                                   |
+| `[%` | `* v:<C-U>call <SNR>63_MultiMatch("bW", "o") <CR>`        |
+| `[%` | `<Esc>[%m'gv`                                           |
+| `[%` | `* :<C-U>call <SNR>63_MultiMatch("bW", "n") <CR>`         |
+| `]%` | `* v:<C-U>call <SNR>63_MultiMatch("W",  "o") <CR>`        |
+| `]%` | `<Esc>]%m'gv`                                           |
+| `]%` | `* :<C-U>call <SNR>63_MultiMatch("W",  "n") <CR>`         |
+| `g%` | `* v:<C-U>call <SNR>63_Match_wrapper('',0,'o') <CR>`      |
+| `g%` | `* :<C-U>call <SNR>63_Match_wrapper('',0,'v') <CR>m'gv`   |
+| `g%` | `* :<C-U>call <SNR>63_Match_wrapper('',0,'n') <CR>`       |
+
+# my settings
+
+## motions
+
+| map                | command                               |
+| ---                | -------                               |
+| `<C-K>`            | `10k`                                 |
+| `<C-J> (aka <NL>)` | `10j`                                 |
+
+## text transforms
+
+| map                | command                               |
+| ---                | -------                               |
+| `,$`               | `:call Preserve("%s/\\s\\+$//e")<CR>` |
+
+# NERDCommenter
+
+prefix is `<leader>c`, category is *text transform*
+
+| map         | command                    |
+| ---         | -------                    |
+| `,cc`       | `NERDCommenterComment`     |
+| `,cu`       | `NERDCommenterUncomment`   |
+|             | **below I use less often** |
+| `,ca`       | `NERDCommenterAltDelims`   |
+| `,cb`       | `NERDCommenterAlignBoth`   |
+| `,cl`       | `NERDCommenterAlignLeft`   |
+| `,cA`       | `NERDCommenterAppend`      |
+| `,cy`       | `NERDCommenterYank`        |
+| `,cs`       | `NERDCommenterSexy`        |
+| `,ci`       | `NERDCommenterInvert`      |
+| `,c$`       | `NERDCommenterToEOL`       |
+| `,cn`       | `NERDCommenterNested`      |
+| `,cm`       | `NERDCommenterMinimal`     |
+| `,c<Space>` | `NERDCommenterToggle`      |
+| `<D-/k>`    | `NERDCommenterToggle<CR>`  |
+
+# NERDTree
+
+prefix is `<M-R>`, categories are *change window*, *navigate*.
+
+| map          | command               |
+| ---          | -------               |
+| `<M-R><M-R>` | `:NERDTreeToggle<CR>` |
+| `<M-R><M-F>` | `:NERDTreeFind<CR>`   |
+
+# Surround
+
+category: *text transform*
+
+TODO: consider using a `<leader>s` prefix for all of these
+
+| map   | command      |
+| ---   | -------      |
+| `cs`  | `Csurround`  |
+| `ds`  | `Dsurround`  |
+| `gS`  | `VgSurround` |
+| `ySS` | `YSsurround` |
+| `ySs` | `YSsurround` |
+| `yss` | `Yssurround` |
+| `yS`  | `YSurround`  |
+| `ys`  | `Ysurround`  |
+| `S`   | `VSurround`  |
+
+# Tagbar
+
+category is *opens a window*
+
+| map   | command             |
+| ---   | -------             |
+| `<M-A>` | `:TagbarToggle<CR>` |
 
 # unimpaired
 
@@ -359,62 +406,13 @@ TODO: I'm missing [b and ]b maps
 | `yo`       | `* :call <SNR>99_setup_paste()<CR>o`                    |
 | `yp`       | `* :call <SNR>99_setup_paste()<CR>a`                    |
 
-# Surround
+# ZoomWin
 
-category: *text transform*
+category is *opens a window*
 
-TODO: consider using a `<leader>s` prefix for all of these
-
-| map   | command      |
-| ---   | -------      |
-| `cs`  | `Csurround`  |
-| `ds`  | `Dsurround`  |
-| `gS`  | `VgSurround` |
-| `ySS` | `YSsurround` |
-| `ySs` | `YSsurround` |
-| `yss` | `Yssurround` |
-| `yS`  | `YSurround`  |
-| `ys`  | `Ysurround`  |
-| `S`   | `VSurround`  |
-
-# matchit
-
-category is *motion*
-
-| map  | command                                                   |
-| ---  | -------                                                   |
-| `[%` | `* v:<C-U>call <SNR>63_MultiMatch("bW", "o") <CR>`        |
-| `[%` | `<Esc>[%m'gv`                                           |
-| `[%` | `* :<C-U>call <SNR>63_MultiMatch("bW", "n") <CR>`         |
-| `]%` | `* v:<C-U>call <SNR>63_MultiMatch("W",  "o") <CR>`        |
-| `]%` | `<Esc>]%m'gv`                                           |
-| `]%` | `* :<C-U>call <SNR>63_MultiMatch("W",  "n") <CR>`         |
-| `g%` | `* v:<C-U>call <SNR>63_Match_wrapper('',0,'o') <CR>`      |
-| `g%` | `* :<C-U>call <SNR>63_Match_wrapper('',0,'v') <CR>m'gv`   |
-| `g%` | `* :<C-U>call <SNR>63_Match_wrapper('',0,'n') <CR>`       |
-
-# indent object
-
-category is *motion*
-
-| map  | command                                                                                                           |
-| ---  | -------                                                                                                           |
-| `aI` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(0, 1, 1, [line("'<"), line("'>"), col("'<"), col("'>")])<CR><Esc>gv` |
-| `aI` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(0, 1, 0, [line("."), line("."), col("."), col(".")])<CR>`            |
-| `ai` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(0, 0, 1, [line("'<"), line("'>"), col("'<"), col("'>")])<CR><Esc>gv` |
-| `ai` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(0, 0, 0, [line("."), line("."), col("."), col(".")])<CR>`            |
-| `iI` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(1, 1, 1, [line("'<"), line("'>"), col("'<"), col("'>")])<CR><Esc>gv` |
-| `iI` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(1, 1, 0, [line("."), line("."), col("."), col(".")])<CR>`            |
-| `ii` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(1, 0, 1, [line("'<"), line("'>"), col("'<"), col("'>")])<CR><Esc>gv` |
-| `ii` | `* :<C-U>cal <SNR>61_HandleTextObjectMapping(1, 0, 0, [line("."), line("."), col("."), col(".")])<CR>`            |
-
-# gundo
-
-categories are *opens a window*, *navigate*
-
-| map     | command            |
-| ---     | -------            |
-| `<M-G>` | `:GundoToggle<CR>` |
+| map          | command        |
+| ---          | -------        |
+| `<C-W><C-M>` | `:ZoomWin<CR>` |
 
 # Notes
 
