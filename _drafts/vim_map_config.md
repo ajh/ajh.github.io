@@ -1,7 +1,9 @@
 ---
 layout: post
-title:  "My vim map configuration"
+title: My vim maps
 categories: vim
+excerpt: 
+  Explains the way I configure my maps and lists them for reference
 ---
 
 # Introduction
@@ -12,7 +14,7 @@ Some use control characters, some use leaders. Also, they often don't
 provide mappings to secondary features which I would like to have, like
 NERDTreeFind, and it can difficult to choose a good mapping.
 
-So I set out to reconceptualize my mappings.
+So I set out to reconceptualize my mappings. This page explains that and lists my maps for reference.
 
 ## Map namespaces
 
@@ -22,6 +24,7 @@ First of all, I can think of mapping keys as in different namespaces:
 * Control keys (like `<C-P>` for CtrlP)
 * Alt keys
 * `[` and `]` (used by motions)
+* Ctrl-W window commands
 * no-prefix, like `i` in normal mode to enter insert mode
 
 The **leader** space is good because it's a known convention for user maps
@@ -52,6 +55,9 @@ In sum, avoid these:
 
 **Motion keys** are great but should only be used by motions.
 
+**Ctrl-W window keys** are like `<C-W>v` which creates a vertical split.
+These keys all modify windows. Many keys are already defined.
+
 **No-prefix keys** are used by vim. I'm not sure if any are available
 for maps.
 
@@ -80,45 +86,40 @@ Here's what I'm going with:
 
 # My settings
 
+## motions
+
 | map                | command                               |
 | ---                | -------                               |
-
-* motion
-
 | `<C-K>`            | `10k`                                 |
 | `<C-J> (aka <NL>)` | `10j`                                 |
 
-* text transform
+## text transforms
 
+| map                | command                               |
+| ---                | -------                               |
 | `,$`               | `:call Preserve("%s/\\s\\+$//e")<CR>` |
 
 # CtrlP
 
-prefix is `<M-P>`
+Prefix is `<C-P>`, categories are *change window*, *fuzzy find*.
 
-| map     | command      |
-| ---     | -------      |
-| `<M-P><M-P>` | `:CtrlP`     |
-| `<M-P><M-B>` | :CtrlPBuffer |
-
-* change window
-* fuzzy find
+| map          | command            |
+| ---          | -------            |
+| `<C-P><C-P>` | `:CtrlP<CR>`       |
+| `<C-P><C-B>` | `:CtrlPBuffer<CR>` |
 
 # NERDTree
 
-prefix is `<M-N>`
+prefix is `<M-R>`, categories are *change window*, *navigate*.
 
-| map  | command                                   |
-| ---  | -------                                   |
-| `<M-N><M-N>` | `:NERDTreeToggle<CR> :NERDTreeMirror<CR>` |
-| `<M-N><M-F>` | `:NERDTreeFind<CR>`                       |
-
-* change window
-* navigate
+| map          | command               |
+| ---          | -------               |
+| `<M-R><M-R>` | `:NERDTreeToggle<CR>` |
+| `<M-R><M-F>` | `:NERDTreeFind<CR>`   |
 
 # NERDCommenter
 
-prefix is `<leader>c`
+prefix is `<leader>c`, category is *text transform*
 
 | map         | command                    |
 | ---         | -------                    |
@@ -138,33 +139,29 @@ prefix is `<leader>c`
 | `,c<Space>` | `NERDCommenterToggle`      |
 | `<D-/k>`    | `NERDCommenterToggle<CR>`  |
 
-* text transform
 
 # ZoomWin
 
-prefix is `<M-Z>`
+category is *opens a window*
 
-| map      | command        |
-| ---      | -------        |
-| `<M-Z>`  | `:ZoomWin<CR>` |
+| map          | command        |
+| ---          | -------        |
+| `<C-W><C-M>` | `:ZoomWin<CR>` |
 
-* opens a window
 
 # Tagbar
 
-prefix is `<M-T>`
+category is *opens a window*
 
 | map   | command             |
 | ---   | -------             |
-| `<M-T>` | `:TagbarToggle<CR>` |
-
-* opens a window
+| `<M-A>` | `:TagbarToggle<CR>` |
 
 # Fugitive
 
 prefix is `<leader>g`
 
-* add Ggrep which I use most often
+TODO: add a map to Ggrep which I use most often
 
 | map   | command         |
 | ---   | -------         |
@@ -177,17 +174,15 @@ prefix is `<leader>g`
 
 # Inflector (my plugin)
 
-prefix is `<leader>i`
+prefix is `<leader>i`, category is *text transform*
 
 | map   | command             |
 | ---   | -------             |
 | `,ii` | `:call Inflector()` |
 
-* text transform
-
 # Easy Motion
 
-prefix is `<leader><leader>`
+prefix is `<leader><leader>`, category is *motion*
 
 | map    | command                               |
 | ---    | -------                               |
@@ -208,20 +203,15 @@ prefix is `<leader><leader>`
 | `,,E`  | `* :call EasyMotion#EW(0, 0)<CR>`     |
 | `,,B`  | `* :call EasyMotion#WBW(0, 1)<CR>`    |
 
-* motion
-
 # Buffergator
 
-prefix is `<M-B>`
+prefix is `<M-F>`, categories *change window*, *navigate*
 
-* I'm missing [b and ]b maps
+TODO: I'm missing [b and ]b maps
 
 | map          | command                                                  |
 | ---          | -------                                                  |
-| `<M-B><M-B>` | `:BuffergatorToggle()<CR>`
-
-* change window
-* navigate
+| `<M-F>` | `:BuffergatorToggle()<CR>`
 
 # janus
 
@@ -371,9 +361,9 @@ prefix is `<M-B>`
 
 # Surround
 
-prefix `s`
+category: *text transform*
 
-text transform
+TODO: consider using a `<leader>s` prefix for all of these
 
 | map   | command      |
 | ---   | -------      |
@@ -389,7 +379,7 @@ text transform
 
 # matchit
 
-* motion
+category is *motion*
 
 | map  | command                                                   |
 | ---  | -------                                                   |
@@ -405,7 +395,7 @@ text transform
 
 # indent object
 
-* motion
+category is *motion*
 
 | map  | command                                                                                                           |
 | ---  | -------                                                                                                           |
@@ -420,13 +410,10 @@ text transform
 
 # gundo
 
-prefix `<M-G>`
+categories are *opens a window*, *navigate*
 
-* opens a window
-* navigate
-
-| map    | command            |
-| ---    | -------            |
+| map     | command            |
+| ---     | -------            |
 | `<M-G>` | `:GundoToggle<CR>` |
 
 # Notes
@@ -436,4 +423,4 @@ prefix `<M-G>`
     :redir > maps.txt
     :silent map
     :redir END
-
+    :e maps.txt
