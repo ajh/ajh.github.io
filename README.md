@@ -22,6 +22,8 @@ To run jkyll locally, use this command:
 
 * consider vim screen shots
 * post table of contents with anchors
+* create a quickfix toggle map - I have an evernote article about this
+* Can ctags be used to find references to a tag?
 
 # Stuff
 
