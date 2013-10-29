@@ -24,6 +24,14 @@ To run jkyll locally, use this command:
 * post table of contents with anchors
 * create a quickfix toggle map - I have an evernote article about this
 * Can ctags be used to find references to a tag?
+* look into text objects and motions
+* look into how to open buffer into windows, like opening into a new
+  vertical split, new horizontal split, last window, etc. Look at this
+  for plugins that open buffers too:
+  * nerdtree
+  * buffergator
+  * ctrlp
+  * command line
 
 # Stuff
 
