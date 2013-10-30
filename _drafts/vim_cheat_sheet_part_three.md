@@ -63,6 +63,7 @@ Both files and buffers can be opened by:
 * ZoomWin
 * my vim plugins
 * motions like [[ and [m
+* spell
 
 Common patterns of use:
 * list and select within list
