@@ -1,3 +1,8 @@
+// Add a table of contents to the article.
+//
+// * The table will be added to the article's header
+// * Each h1 will be an item in the table
+// * Each h1 will have an anchor added near it
 var tableOfContents = {
   init: function( settings ) {
     var headers = $('article h1');
