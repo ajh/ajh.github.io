@@ -4,7 +4,7 @@ title:  "Vim Cheat Sheet Part One"
 categories: vim
 ---
 
-This is my personal vim cheatsheet. The features described here are ones
+This is my personal vim cheat sheet. The features described here are ones
 that I find most useful. I've also tried to select the best commands to
 interact with a feature.
 
@@ -13,7 +13,7 @@ This is part one. I plan to write up more features later.
 --------------------------
 # buffers with buffergator
 
-see `:help buffergator`
+See `:help buffergator`
 
 | command     | description         |
 | -------     | -----------         |
@@ -26,14 +26,14 @@ see `:help buffergator`
 -------
 # jumps
 
-see `:help jumps`
+See `:help jumps`
 Each window has its own jump list.
 
 | command  | description       |
 | -------  | -----------       |
 | :ju[mps] | Open list:        |
-| CTRL-0   | navigate previous |
-| CTRL-I   | navigate next     |
+| `<C-0>`   | navigate previous |
+| `<C-I>`   | navigate next     |
 
 ------------
 # changelist
@@ -97,7 +97,7 @@ The alternate is most likely the previously edited file.
 
 | command | description                                    |
 | ------- | -----------                                    |
-| CTRL-^  | toggle between current file and alternate file |
+| `<C-^>`  | toggle between current file and alternate file |
 
 ------
 # tags
@@ -106,22 +106,22 @@ See `:help tags`
 
 My preferred ways to start a tag search:
 
-- CTRL-] with cursor on keyword, goes to first match
-- g CTRL-] (Like CTRL-], but opens tselect menu when more than one match)
+- `<C-]>` with cursor on keyword, goes to first match
+- g `<C-]>` (Like `<C-]>`, but opens tselect menu when more than one match)
 - :tj[ump] {ident} (opens tselect menu when more than one match)
 
 Jumping to a tag will create an item on the tag stack
 
-| command          | description |
-| -------          | ----------- |
-| :tags            | Open list   |
-| ESC              | close list  |
-| :po[p] or CTRL-T | previous    |
-| :ta[g]           | next        |
+| command           | description |
+| -------           | ----------- |
+| :tags             | Open list   |
+| ESC               | close list  |
+| :po[p] or `<C-T>` | previous    |
+| :ta[g]            | next        |
 
 ## tag-matchlist
 
-see `:help tag-matchlist`
+See `:help tag-matchlist`
 
 A search may find several matching tags. Each match is put into a match
 list.
@@ -140,7 +140,7 @@ list.
 Grep results are put in quickfix. Maybe someday I'll have test failures
 here as well.
 
-see `:help quickfix`
+See `:help quickfix`
 
 | command      | description       |
 | -------      | -----------       |
@@ -155,9 +155,9 @@ see `:help quickfix`
 
 *Update: See `:help gundo` for a better way to interact with this.*
 
-This adds branching to the basic undo (u and CTRL-R)
+This adds branching to the basic undo (u and `<C-R>`)
 
-see `:help undo-branches`
+See `:help undo-branches`
 
 | command     | description            |
 | -------     | -----------            |

@@ -19,7 +19,7 @@ The most useful trick is opening the Command line window. See `:help cmdline-win
 > text in any window.  It is a special kind of window, because you cannot leave
 > it in a normal way.
 
-Press CTRL-f to edit the command line text in insert mode.
+Press `<C-f>` to edit the command line text in insert mode.
 
 # record
 
@@ -29,16 +29,16 @@ Since recording a macro is kinda simple, I'll omit that. The biggest
 thing to remember is how to edit a recorded macro:
 
 1. First record the macro using qq
-1. type `:let @q='` Then `CTRL-R CTRL-R q` which will insert the text
+1. Type `:let @q='` Then `<C-R><C-R>q` which will insert the text
    under the cursor (see `:help c_CTRL-R_CTRL-R`)
 1. Edit the text
-1. close the quote and press enter
+1. Close the quote and press enter
 
-Note: `CTRL-R CTRL-R` can also be used in the command line window.
+Note: `<C-R><C-R>` can also be used in the command line window.
 
 # helpgrep
 
-see `:help :helpgrep`
+See `:help :helpgrep`
 
 Greps through the help and builds a quickfix list of matches. Works
 better than :help when trying to find something without knowing its

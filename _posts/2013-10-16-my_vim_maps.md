@@ -2,7 +2,7 @@
 layout: post
 title: My vim maps
 categories: vim
-excerpt: 
+excerpt:
   Explains the way I configure my maps and lists them for reference
 ---
 
@@ -35,7 +35,7 @@ keys.
 **Control keys** are not so good because vim defines a lot of them and the
 namespace is very crowed. Also, some have meaning for terminals like
 `<C-S>` to suspend. My research found that only the following are
-save to use in normal mode: 
+safe to use in normal mode:
 
     h, i, j, m, n, p, k.
 
@@ -74,7 +74,7 @@ I can categorize plugin features into a few types:
 * navigation
 * text transform (selected with a motion or visual mode)
 * window related (I include features which open in a window, like NERDTree)
-* fuzzy find 
+* fuzzy find
 
 ## my concept
 
@@ -86,7 +86,7 @@ Here's what I'm going with:
 
 # Buffergator
 
-prefix is `<M-F>`, categories *change window*, *navigate*
+Prefix is `<M-F>`, categories *change window*, *navigate*
 
 TODO: I'm missing [b and ]b maps
 
@@ -105,7 +105,7 @@ Prefix is `<C-P>`, categories are *change window*, *fuzzy find*.
 
 # Easy Motion
 
-prefix is `<leader><leader>`, category is *motion*
+Prefix is `<leader><leader>`, category is *motion*
 
 | map    | command                               |
 | ---    | -------                               |
@@ -128,7 +128,7 @@ prefix is `<leader><leader>`, category is *motion*
 
 # Fugitive
 
-prefix is `<leader>g`
+Prefix is `<leader>g`
 
 TODO: add a map to Ggrep which I use most often
 
@@ -143,7 +143,7 @@ TODO: add a map to Ggrep which I use most often
 
 # gundo
 
-categories are *opens a window*, *navigate*
+Categories are *opens a window*, *navigate*
 
 | map     | command            |
 | ---     | -------            |
@@ -151,7 +151,7 @@ categories are *opens a window*, *navigate*
 
 # indent object
 
-category is *motion*
+Category is *motion*
 
 | map  | command                                                                                                           |
 | ---  | -------                                                                                                           |
@@ -166,7 +166,7 @@ category is *motion*
 
 # Inflector (my plugin)
 
-prefix is `<leader>i`, category is *text transform*
+Prefix is `<leader>i`, category is *text transform*
 
 | map   | command             |
 | ---   | -------             |
@@ -222,7 +222,7 @@ prefix is `<leader>i`, category is *text transform*
 
 # matchit
 
-category is *motion*
+Category is *motion*
 
 | map  | command                                                   |
 | ---  | -------                                                   |
@@ -253,7 +253,7 @@ category is *motion*
 
 # NERDCommenter
 
-prefix is `<leader>c`, category is *text transform*
+Prefix is `<leader>c`, category is *text transform*
 
 | map         | command                    |
 | ---         | -------                    |
@@ -275,7 +275,7 @@ prefix is `<leader>c`, category is *text transform*
 
 # NERDTree
 
-prefix is `<M-R>`, categories are *change window*, *navigate*.
+Prefix is `<M-R>`, categories are *change window*, *navigate*.
 
 | map          | command               |
 | ---          | -------               |
@@ -284,7 +284,7 @@ prefix is `<M-R>`, categories are *change window*, *navigate*.
 
 # Surround
 
-category: *text transform*
+Category: *text transform*
 
 TODO: consider using a `<leader>s` prefix for all of these
 
@@ -302,7 +302,7 @@ TODO: consider using a `<leader>s` prefix for all of these
 
 # Tagbar
 
-category is *opens a window*
+Category is *opens a window*
 
 | map   | command             |
 | ---   | -------             |
@@ -408,7 +408,7 @@ category is *opens a window*
 
 # ZoomWin
 
-category is *opens a window*
+Category is *opens a window*
 
 | map          | command        |
 | ---          | -------        |
