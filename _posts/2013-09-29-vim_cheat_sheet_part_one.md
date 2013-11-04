@@ -142,13 +142,17 @@ here as well.
 
 See `:help quickfix`
 
-| command      | description       |
-| -------      | -----------       |
-| :cope[n]     | Open list:        |
-| :ccl[ose]    | close list:       |
-| jk           | navigate in list  |
-| :cn[ext]     | navigate next     |
-| :cp[revious] | navigate previous |
+| command                              | description       |
+| -------                              | -----------       |
+| :cope[n]                             | Open list:        |
+| :ccl[ose]                            | close list:       |
+| jk                                   | navigate in list  |
+| `]q`                                 | navigate next     |
+| `[q`                                 | navigate previous |
+| `[Q`                                 | navigate first    |
+| `]Q`                                 | navigate last     |
+
+<small>* the last four are from the unimpaired plugin</small>
 
 ---------------
 # undo branches
