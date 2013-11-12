@@ -32,6 +32,8 @@ To run jkyll locally, use this command:
   * buffergator
   * ctrlp
   * command line
+* http://stackoverflow.com/questions/3171284/recent-file-history-in-vim
+  Add info about :browse old
 
 # Stuff
 
