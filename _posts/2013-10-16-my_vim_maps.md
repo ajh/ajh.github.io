@@ -101,7 +101,7 @@ Prefix is `<C-P>`, categories are *change window*, *fuzzy find*.
 | map          | command            |
 | ---          | -------            |
 | `<C-P><C-P>` | `:CtrlP<CR>`       |
-| `<C-P><C-B>` | `:CtrlPBuffer<CR>` |
+| `<C-P><C-U>` | `:CtrlPBuffer<CR>` |
 
 # Easy Motion
 
