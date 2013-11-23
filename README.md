@@ -10,7 +10,7 @@ The following directories and their contents are Copyright Andrew Hartford. You 
 * \_drafts/
 * images/
 
-All other directories and files are MIT Licensed. Feel free to use the HTML and CSS as you please. If you do use them, a link back to http://github.com/mojombo/jekyll would be appreciated, but is not required.
+All other directories and files are MIT Licensed. Feel free to use the HTML and CSS as you please. If you do use them, a link back to http://ajh.github.io would be appreciated, but is not required.
 
 # Jekyll usage
 
@@ -21,41 +21,20 @@ To run jkyll locally, use this command:
 # TODO
 
 * consider vim screen shots
-* post table of contents with anchors
 * create a quickfix toggle map - I have an evernote article about this
 * Can ctags be used to find references to a tag?
 * look into text objects and motions
-* look into how to open buffer into windows, like opening into a new
-  vertical split, new horizontal split, last window, etc. Look at this
-  for plugins that open buffers too:
-  * nerdtree
-  * buffergator
-  * ctrlp
-  * command line
 * http://stackoverflow.com/questions/3171284/recent-file-history-in-vim
   Add info about :browse old
 
 # Stuff
 
-* links - github, doxo, vim cheatsheet, google plus, facebook, linked in
-* list of posts
 * categories
 
-## index
+## index.html
 
 * option A - most recent post with list of other posts
 * option B - list of posts line items or excerpts
 * option C - list of full posts, with pagination
 
-## blog names
-
-* bit repairman - Notes from a ruby developer.
-* bit mechanic
-* bit technician
-* grease monkey patcher
-* duck typer
-* bit and tackle
-* bits and pieces
-* marginalia of a ruby developer
-* marginal notes of a ruby developer
-* marginal notes found in a ruby repair manual
+I chose B
