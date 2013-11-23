@@ -130,9 +130,11 @@ See `:help tags`
 
 My preferred ways to start a tag search:
 
-| Open in prev window           | Open in vertical split | Open in horizontal split | Open in preview   | Open in tab         |
-| -------------------           | ---------------------- | ------------------------ | ---------------   | -----------         |
-| `:tj[ump] {ident}`, `g <C-]>` |                        | `:stj[ump] {ident}`      |                   |                     |
+| Open in prev window           | Open in vertical split | Open in horizontal split | Open in preview                  | Open in tab |
+| -------------------           | ---------------------- | ------------------------ | ---------------                  | ----------- |
+| `:tj[ump] {ident}`, `g <C-]>` |                        | `:stj[ump] {ident}`      | `<C-W> g }`, `:ptj[ump] {ident}` |             |
+
+#### Tag stack
 
 Jumping to a tag will create an item on the tag stack
 
