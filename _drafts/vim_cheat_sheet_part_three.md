@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Vim Cheat Sheet Part Three"
+title:  "Draft - A Vim Cheat Sheet Part Three"
 categories: vim
 excerpt: "description of vim features"
 ---
