@@ -11,7 +11,7 @@ interact with a feature.
 This is part one. I plan to write up more features later.
 
 --------------------------
-# buffers with buffergator
+# buffergator
 
 See `:help buffergator`
 
@@ -22,6 +22,12 @@ See `:help buffergator`
 | j or k      | navigate up or down |
 |             | add to list         |
 | d           | remove from list    |
+
+#### opening buffers
+
+| Open in prev window           | Open in vertical split | Open in horizontal split | Open in preview   | Open in tab         |
+| -------------------           | ---------------------- | ------------------------ | ---------------   | -----------         |
+| `<CR>`                        | `s`, `<C-V>`           | `i`, `<C-S>`             | `go`              | `t`, `<C-T>`        |
 
 -------
 # jumps
@@ -80,7 +86,7 @@ See `:help copy-move`
 | ESC                                                               | close list                  |
 | prefix a command with "{arg} like "xyy to yank line to register x | To add                      |
 
-## types of registers
+#### types of registers
 
 This isn't a complete list, just ones I find useful
 
@@ -106,9 +112,9 @@ See `:help tags`
 
 My preferred ways to start a tag search:
 
-- `<C-]>` with cursor on keyword, goes to first match
-- g `<C-]>` (Like `<C-]>`, but opens tselect menu when more than one match)
-- :tj[ump] {ident} (opens tselect menu when more than one match)
+| Open in prev window           | Open in vertical split | Open in horizontal split | Open in preview   | Open in tab         |
+| -------------------           | ---------------------- | ------------------------ | ---------------   | -----------         |
+| `:tj[ump] {ident}`, `g <C-]>` |                        | `:stj[ump] {ident}`      |                   |                     |
 
 Jumping to a tag will create an item on the tag stack
 
@@ -119,7 +125,7 @@ Jumping to a tag will create an item on the tag stack
 | :po[p] or `<C-T>` | previous    |
 | :ta[g]            | next        |
 
-## tag-matchlist
+# tag-matchlist
 
 See `:help tag-matchlist`
 
@@ -153,6 +159,12 @@ See `:help quickfix`
 | `]Q`                                 | navigate last     |
 
 <small>* the last four are from the unimpaired plugin</small>
+
+#### opening buffers
+
+| Open in prev window           | Open in vertical split | Open in horizontal split | Open in preview   | Open in tab         |
+| -------------------           | ---------------------- | ------------------------ | ---------------   | -----------         |
+| `<CR>`                        | `<C-W> <CR>` ?         | `<C-W> <CR>` ?           |                   |                     |
 
 ---------------
 # undo branches

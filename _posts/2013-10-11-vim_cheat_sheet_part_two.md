@@ -21,6 +21,12 @@ The most useful trick is opening the Command line window. See `:help cmdline-win
 
 Press `<C-f>` to edit the command line text in insert mode.
 
+#### Opening buffers
+
+| Open in prev window           | Open in vertical split | Open in horizontal split | Open in preview   | Open in tab         |
+| -------------------           | ---------------------- | ------------------------ | ---------------   | -----------         |
+| `:e[dit] {file}`              | `:vs[plit] {file}`     | `:sp[lit] {file}`        | `:ped[it] {file}` | `:tabe[dit] {file}` |
+
 # record
 
 See `:help complex-repeat`
