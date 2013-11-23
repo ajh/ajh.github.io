@@ -1,13 +1,9 @@
 ---
 layout: post
-title:  "Draft - A Vim Cheat Sheet Part Three"
+title:  "A Vim Cheat Sheet Part Three"
 categories: vim
-excerpt: "description of vim features"
+excerpt: "Description of CtrlP, Tagbar, NERDTree, ZoomWin and more."
 ---
-
-Here are some more vim features. See <a href="{{ site.url }}/vim/2013/09/29/vim_cheat_sheet_part_one.html">part one of the cheat sheet</a> here.
-
-*TODO*: add link to part two.
 
 # CtrlP
 
@@ -65,23 +61,6 @@ See `:help indent-object`
 | `<count>ii`      | (I)nner (I)ndentation level (no line above)        |
 | `<count>aI`      | (A)n (I)ndentation level and lines above/below     |
 | `<count>iI`      | (I)nner (I)ndentation level (no lines above/below) |
-
-# motions like [[ and [m
-
-See `:help motion.txt`
-
-There's a bunch of motions and they won't all be listed.
-
-| command  | description         |
-| ---      | -------             |
-| `[[` | |
-| `]] | |
-| `[m | |
-| `]m | |
-
-# My Misc plugin
-
-See `:help TBD`
 
 # Tagbar
 
@@ -157,11 +136,3 @@ See `:help zoomwin`
 | command    | description                       |
 | ---        | -------                           |
 | <C-W><C-M> | Toggle zooming for current window |
-
-# TODO
-
-* my vim plugins
-
-Questions:
-* Why does indent-object only work to select text in visual mode? But
-  the ruby plugin adds motions like [m. Are they interchangable?
