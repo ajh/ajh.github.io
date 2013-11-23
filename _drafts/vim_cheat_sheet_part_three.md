@@ -9,17 +9,65 @@ Here are some more vim features. See <a href="{{ site.url }}/vim/2013/09/29/vim_
 
 *TODO*: add link to part two.
 
-# preview window
+# CtrlP
 
-The preview window is a special window to show (preview) another file.
+See `:help ctrlp`
+
+| command          | description                                                                         |
+| ---              | -------                                                                             |
+| `<C-P><C-P>`     | Open CtrlP window in find file mode                                                 |
+| `<C-P><C-U>`     | Open CtrlP window in find buffer mode                                               |
+| :CtrlPClearCache | Clear caches. Useful when using find file mode if files have been added or removed. |
+
+#### Opening buffers
+
+Once inside the a CtrlP window, these keys open buffers.
+
+| Open in prev window           | Open in vertical split | Open in horizontal split | Open in preview   | Open in tab         |
+| -------------------           | ---------------------- | ------------------------ | ---------------   | -----------         |
+| `<CR>`                        | `<C-V>`                | `<C-S>`                  |                   | `<C-T>`             |
+
+
+There are also a bunch of extensions that I don't use currently, but can
+be enabled. They allow fuzzy finding for bookmarkdir, buffertag,
+changes, dir, line, mixed, quickfix, rtscript, tag, and undo.
+
+# EasyMotion
+
+See `:help easymotion`
+
+Prefix any motion (like w, E) with `<leader><leader>` and it'll
+highlight text to show possible destinations of the motion and allow
+selecting them.
+
+| command                  | description                        |
+| ---                      | -------                            |
+| `<leader><leader>motion` | highlight destinations of _motion_ |
+
+
+# Fugitive
+
+See `:help fugitive`
+
+There are a bunch of commands. I only use a few currently.
+
+| command                  | description                        |
+| ---                      | -------                            |
+| `:Ggrep` | grep using git-grep |
+
+# indent-object
+
+# motions like [[ and [m
+
+# My Misc plugin
+
+# Tagbar
 
 # NERDTree
 
-# Configuration
+# Preview window
 
-Theres the big topic of configuring keybindings. I could have a table of
-<leader>[a-zA-Z] and map which plugin owns each letter. I think I'm
-going to have to move to a two letter keybinding system.
+The preview window is a special window to show (preview) another file.
 
 # Redir
 
@@ -34,46 +82,17 @@ This'll write all the configure maps to a file:
 :redir END
 {% endhighlight %}
 
-# Lists and how I interact with them
+# Rspec Tools
 
-Opening files:
+# spell
 
-* navigate with NERDTree
-* fuzzy match with CtrlP
-
-Switching buffers:
-
-* navigate with buffergator
-* don't have fuzzy match, although this could be built
-* switch to alternate file
-* jumplist
-
-Both files and buffers can be opened by:
-
-* search with grep
-* search with tags
+# ZoomWin
 
 # TODO
 
-* CTRLP
-* Tagbar
-* EasyMotion
-* indent-object
-* Fugitive
-* ZoomWin
 * my vim plugins
-* motions like [[ and [m
-* spell
-
-Common patterns of use:
-* list and select within list
-* next previous and other navigation
-* delete from list
-* open list window, close list window
-
-And how I use them
 
 Questions:
 * Why does indent-object only work to select text in visual mode? But
-  the ruby plugin adds motions like [m. Are they interchangable.
+  the ruby plugin adds motions like [m. Are they interchangable?
 
