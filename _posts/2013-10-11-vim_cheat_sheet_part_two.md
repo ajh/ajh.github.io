@@ -27,6 +27,14 @@ Press `<C-f>` to edit the command line text in insert mode.
 | -------------------           | ---------------------- | ------------------------ | ---------------   | -----------         |
 | `:e[dit] {file}`              | `:vs[plit] {file}`     | `:sp[lit] {file}`        | `:ped[it] {file}` | `:tabe[dit] {file}` |
 
+# helpgrep
+
+See `:help :helpgrep`
+
+Greps through the help and builds a quickfix list of matches. Works
+better than :help when trying to find something without knowing its
+name. Or when there's a name conflict. If neither work just google it.
+
 # record
 
 See `:help complex-repeat`
@@ -42,10 +50,3 @@ thing to remember is how to edit a recorded macro:
 
 Note: `<C-R><C-R>` can also be used in the command line window.
 
-# helpgrep
-
-See `:help :helpgrep`
-
-Greps through the help and builds a quickfix list of matches. Works
-better than :help when trying to find something without knowing its
-name. Or when there's a name conflict. If neither work just google it.

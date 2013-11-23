@@ -10,7 +10,14 @@ interact with a feature.
 
 This is part one. I plan to write up more features later.
 
---------------------------
+# alternate file
+
+The alternate is most likely the previously edited file.
+
+| command | description                                    |
+| ------- | -----------                                    |
+| `<C-^>`  | toggle between current file and alternate file |
+
 # buffergator
 
 See `:help buffergator`
@@ -29,19 +36,6 @@ See `:help buffergator`
 | -------------------           | ---------------------- | ------------------------ | ---------------   | -----------         |
 | `<CR>`                        | `s`, `<C-V>`           | `i`, `<C-S>`             | `go`              | `t`, `<C-T>`        |
 
--------
-# jumps
-
-See `:help jumps`
-Each window has its own jump list.
-
-| command  | description       |
-| -------  | -----------       |
-| :ju[mps] | Open list:        |
-| `<C-0>`   | navigate previous |
-| `<C-I>`   | navigate next     |
-
-------------
 # changelist
 
 A list of cursor positions where changes (edits) were made.
@@ -55,7 +49,17 @@ See `:help changelist`
 | g;       | navigate previous |
 | g,       | navigate next     |
 
--------
+# jumps
+
+See `:help jumps`
+Each window has its own jump list.
+
+| command  | description       |
+| -------  | -----------       |
+| :ju[mps] | Open list:        |
+| `<C-0>`   | navigate previous |
+| `<C-I>`   | navigate next     |
+
 # marks
 
 Bookmarks for cursor positions in a file.
@@ -74,7 +78,31 @@ no uppercase marks} You can use them to jump from file to file.
 | m{a-zA-Z}                           | Add mark         |
 | :delm[arks] {marks} or :delm[arks]! | remove mark      |
 
------------
+# quickfix
+
+Grep results are put in quickfix. Maybe someday I'll have test failures
+here as well.
+
+See `:help quickfix`
+
+| command                              | description       |
+| -------                              | -----------       |
+| :cope[n]                             | Open list:        |
+| :ccl[ose]                            | close list:       |
+| jk                                   | navigate in list  |
+| `]q`                                 | navigate next     |
+| `[q`                                 | navigate previous |
+| `[Q`                                 | navigate first    |
+| `]Q`                                 | navigate last     |
+
+<small>* the last four are from the unimpaired plugin</small>
+
+#### opening buffers
+
+| Open in prev window           | Open in vertical split | Open in horizontal split | Open in preview   | Open in tab         |
+| -------------------           | ---------------------- | ------------------------ | ---------------   | -----------         |
+| `<CR>`                        | `<C-W> <CR>` ?         | `<C-W> <CR>` ?           |                   |                     |
+
 # registers
 
 See `:help copy-move`
@@ -96,16 +124,6 @@ This isn't a complete list, just ones I find useful
 -	"#	Contains the name of the alternate file.
 -	":	Contains the most recent executed command-line.  Example: Use "@:" to repeat the previous command-line command.
 
-----------------
-# alternate file
-
-The alternate is most likely the previously edited file.
-
-| command | description                                    |
-| ------- | -----------                                    |
-| `<C-^>`  | toggle between current file and alternate file |
-
-------
 # tags
 
 See `:help tags`
@@ -140,33 +158,6 @@ list.
 | :tn[ext]                       | or next match  |
 | :tp[revious]                   | previous match |
 
-----------
-# quickfix
-
-Grep results are put in quickfix. Maybe someday I'll have test failures
-here as well.
-
-See `:help quickfix`
-
-| command                              | description       |
-| -------                              | -----------       |
-| :cope[n]                             | Open list:        |
-| :ccl[ose]                            | close list:       |
-| jk                                   | navigate in list  |
-| `]q`                                 | navigate next     |
-| `[q`                                 | navigate previous |
-| `[Q`                                 | navigate first    |
-| `]Q`                                 | navigate last     |
-
-<small>* the last four are from the unimpaired plugin</small>
-
-#### opening buffers
-
-| Open in prev window           | Open in vertical split | Open in horizontal split | Open in preview   | Open in tab         |
-| -------------------           | ---------------------- | ------------------------ | ---------------   | -----------         |
-| `<CR>`                        | `<C-W> <CR>` ?         | `<C-W> <CR>` ?           |                   |                     |
-
----------------
 # undo branches
 
 *Update: See `:help gundo` for a better way to interact with this.*
