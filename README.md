@@ -26,6 +26,7 @@ To run jkyll locally, use this command:
 * look into text objects and motions
 * http://stackoverflow.com/questions/3171284/recent-file-history-in-vim
   Add info about :browse old
+* document CtrlP <C-r> option to toggle searching by regex
 
 # Stuff
 
