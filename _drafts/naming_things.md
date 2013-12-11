@@ -43,11 +43,6 @@ software solves business problems.
 
 * It reveal what the thing is for, Its intention
 
-* Be specific, not too general
-
-If writing an HR system, Employee is probably a better name than
-LifeForm because its more specific.
-
 * Names can be accurate - doesn't misrepresent what a thing is
 
 If a company providers bus routes to customers, a Bus class is natural.
@@ -55,12 +50,17 @@ If they later provider commuter rail routes too, and Bus comes to mean
 buses and trains, then Bus is inaccurate. Something like Vehicle or
 Conveyance would be more accurate.
 
-* names can be precise - little ambiguity, only identifies the thing in
-  question
+* names can be precise
+
+Little ambiguity, only identifies the thing in question. Specific.
 
 Calling a user event class `Event` in javascript. This is not precise
 because it could be confused with dom events. `UserEvent` is a better
 name.
+
+If writing an HR system, Employee is probably a better name than
+LifeForm because its more specific. Data and Stuff are also bad names
+for this reason.
 
 * parts of speech test
 
