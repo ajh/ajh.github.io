@@ -25,6 +25,7 @@ See `:help TBD`
 # TODO
 
 * my vim plugins
+* mkview and loadview for keeping folds on a file
 
 Questions:
 * Why does indent-object only work to select text in visual mode? But
