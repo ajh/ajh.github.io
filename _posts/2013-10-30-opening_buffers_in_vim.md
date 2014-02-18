@@ -13,9 +13,9 @@ available mappings by what are most useful.
 
 | From where   | Open in prev window           | Open in vertical split | Open in horizontal split | Open in preview   | Open in tab         |
 | ----------   | -------------------           | ---------------------- | ------------------------ | ---------------   | -----------         |
-| buffergator  | `<CR>`                        | `s`, `<C-V>`           | `i`, `<C-S>`             | `go`              | `t`, `<C-T>`        |
+| buffergator  | `<CR>`                        | `s`, `<C-V>`           | `i`                      | `go`              | `t`, `<C-T>`        |
 | commandline  | `:e[dit] {file}`              | `:vs[plit] {file}`     | `:sp[lit] {file}`        | `:ped[it] {file}` | `:tabe[dit] {file}` |
-| ctrl-p       | `<CR>`                        | `<C-V>`                | `<C-S>`                  |                   | `<C-T>`             |
+| ctrl-p       | `<CR>`                        | `<C-V>`                | `<C-CR>`                 |                   | `<C-T>`             |
 | nerdtree     | `<CR>`                        | `s`                    | `i`                      | `go`              | `t`                 |
 | quickfix     | `<CR>`                        | `<C-W> <CR>` ?         | `<C-W> <CR>` ?           |                   |                     |
 | rails plugin | `:A`                          | `:AV`                  | `:AS`                    |                   | `:AT`               |
